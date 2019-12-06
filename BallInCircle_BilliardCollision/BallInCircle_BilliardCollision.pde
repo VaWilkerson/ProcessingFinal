@@ -20,11 +20,6 @@ void draw() {
 }
 
 
-
-
-
-
-
 class Ball {
   PVector position;
   PVector velocity;

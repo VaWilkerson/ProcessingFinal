@@ -9,6 +9,8 @@ void setup(){
   ballX = 0;
   //bally = 0;
   b = new Ball(); 
+  //fill(255, 0, 0);
+  
   
   
   
@@ -23,7 +25,8 @@ void draw(){
   b.floatUp();  
   b.display();  //forgot to add the display fn. whoops. 
     
-  fill(150);  
+  fill(255, 0, 0);  
+  //fill(random(255), 0,0); //cycles through b'c its in draw not setup. 
      //fill of the circle. Same input as bkg. 
   
   //stroke(255);  
@@ -61,10 +64,10 @@ void draw(){
   
   
   void display(){  //functionality
-    ellipse(50, 50, 64, 64);
-  
-  
+    ellipse(50, 50, 64, 64);}
 
+
+  void mousePressed(){
+  //b.changeColor;
+  }
   
-  
-}
