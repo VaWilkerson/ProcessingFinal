@@ -2,7 +2,7 @@
 float ballX;
 float xSpeed = 4;
 
-int value = 0;
+float ballColorValue = 0;
 Ball b; 
 
 void setup(){
@@ -13,7 +13,7 @@ void setup(){
 
 void draw(){
   background(200);  
-  fill(value);  
+  fill(ballColorValue);  
   ellipse(ballX, ballX /2, 32, 32);
   ballX = ballX + xSpeed;
   
@@ -26,7 +26,7 @@ void display(){  //functionality
     ellipse(50, 50, 64, 64);}
 
  void mousePressed() {
-  value = random(255);
+  ballColorValue = random(255);
   }
 
  //void mousePressed() {
@@ -35,4 +35,4 @@ void display(){  //functionality
  // } else {
  //   value = 0;
  // }
-}
+//}
