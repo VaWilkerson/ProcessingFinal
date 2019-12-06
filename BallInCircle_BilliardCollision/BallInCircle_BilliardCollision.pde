@@ -157,7 +157,16 @@ class Ball {
   
 
   void display() {
-    //stroke(50, 50);
+   // color c = (255, 0, 0);
+    //stroke(HSB, 50, 50);
+    //noStroke();
+//colorMode(HSB, 100);
+//for (int i = 0; i < 100; i++) {
+//  for (int j = 0; j < 100; j++) {
+//    stroke(i, j, 100);
+//    point(i, j);
+//  }
+//}
     strokeWeight(radius * .1); //radius of stroke is proportional to circle size. 
     fill(5, 255, 255);
     ellipse(position.x, position.y, radius*2, radius*2);
