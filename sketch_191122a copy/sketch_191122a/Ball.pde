@@ -3,6 +3,10 @@ class Ball {
   float x;
   float y;
   
+  float R = 0;
+  float G = 0;
+  float B = 0;
+  
   Ball(){
    x = width / 2;
    y = height;
@@ -22,6 +26,7 @@ class Ball {
    ellipse(x, y, 64, 64);
   }
   
+ 
  
   //void changeColor(){ fill(random(255), 0, 0); }
    

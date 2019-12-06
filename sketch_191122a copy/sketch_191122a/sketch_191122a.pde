@@ -5,22 +5,31 @@ float xSpeed = 4;
 float ballColorValue = 0;
 Ball b; 
 
-float R = 0;
-float G = 0;
-float B = 0;
+
 
 void setup(){
   size(640, 360);
   ballX = 0;
   b = new Ball(); 
+  //b.mousePressed();  //magenta
 }
 
 void draw(){
   background(200);  
-  fill(R, G, B);  
-  //ellipse(ballX, mouseX, 32, 32);  //mouseX pos = ball y pos.
-  ellipse(mouseX, mouseY, 32, 32);
+  fill(b.R, b.G, b.B);  
+  ellipse(ballX, ballX / 2, 32, 32); 
+  //ellipse(ballX, width / 2, 32, 32);  //mouseX pos = ball y pos.
+  //ellipse(mouseX, mouseY, 32, 32);
   ballX = ballX + xSpeed;
+  
+  //mousePressed();  //does nothing. 
+  //b.mousePressed();  //epilepsy warning. 
+  if (ballX > width || ballX < 0) { 
+    xSpeed = xSpeed * -1; 
+  }
+  
+  //if (ball(x
+  
   
   b.floatUp();  
   b.display(); 
@@ -30,12 +39,12 @@ void draw(){
 void display(){  //functionality
     ellipse(50, 50, 64, 64);}
 
-void mousePressed() {
-  R = random(255);
-  G = 40;
-  B = 240;
-  }
 
+  void mousePressed() {
+  b.R = random(255);
+  b.G = 40;
+  b.B = 240;
+  }
 
  //void mousePressed() {
  // if (value == 0) {
@@ -43,4 +52,3 @@ void mousePressed() {
  // } else {
  //   value = 0;
  // }
-//}
