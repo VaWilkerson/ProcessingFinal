@@ -21,7 +21,7 @@ void draw(){
     //white fill of the ellipse
   
   //ellipse(ballX, ballX / 2, 32, 32);
-  triangle(, ballX / 2, 32, 32, 32, 32); 
+  triangle(ballX, ballX / 2, 32, 32, 32, 32); 
         //Will draw a line from one corner to another from pos 32, 32
     //height/ 2 keeps it in the horizontal center. 
     //Putting ballX as the y coord send it on a down right diagonal.  
