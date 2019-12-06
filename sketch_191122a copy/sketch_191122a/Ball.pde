@@ -23,9 +23,9 @@ class Ball {
   }
   
   
-  void changeColor(){
-    fill(random(255), 0, 0);
-  }
+  //void changeColor(){
+//fill(random(255), 0, 0);
+//}
   
   
   

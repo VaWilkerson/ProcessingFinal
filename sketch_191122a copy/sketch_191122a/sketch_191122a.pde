@@ -2,6 +2,7 @@
 float ballX;
 float xSpeed = 4;
 
+int value = 0;
 Ball b; 
 
 void setup(){
@@ -25,7 +26,10 @@ void draw(){
     ellipse(50, 50, 64, 64);}
 
 
-void mousePressed(){
-    b.changeColor();
+void mousePressed() {
+  if (value == 0) {
+    value = 255;
+  } else {
+    value = 0;
   }
-  
+}
