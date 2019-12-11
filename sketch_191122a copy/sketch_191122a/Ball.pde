@@ -3,14 +3,15 @@ class Ball {
   float x;
   float y;
   
-  int R = 0;
-  int G = 0;
-  int B = 0;
+  float R = 0;
+  float G = 0;
+  float B = 0;
   
   //PVector Color;
   //PVector color Color = (R, G, B);   //keeps giving me syntax errors. 
-  PVector BallColor = new PVector (R,G,B); //finally fixed it. I'm dumb. 
-
+  //PVector BallColor = new PVector (R,G,B); //finally fixed it. I'm dumb
+    //TURNED OUT IT DOESNT WORK WHERE I NEED IT TO SO FUCK THAT. 
+    
     //I tried a bunhc of different ways of fixing it but none of them worked. 
     //Why can't I just assign a fucking vector
   
@@ -37,9 +38,7 @@ class Ball {
        
   
    stroke(10);
-   fill(BallColor);//The function "fill()" expects paramteres like: "fill(int)"
-   //I dont get it, whats the diff between fill(R, G, B) which worked fine, 
-   //and fill(BallColor) when Ball color = (R, G, B)??
+   fill(R, G, B);
    ellipse(x, y, ballWidth, ballHeight);
   }
   
