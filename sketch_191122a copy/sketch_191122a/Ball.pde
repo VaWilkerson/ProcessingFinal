@@ -12,9 +12,6 @@ class Ball {
   //PVector BallColor = new PVector (R,G,B); //finally fixed it. I'm dumb
     //TURNED OUT IT DOESNT WORK WHERE I NEED IT TO SO FUCK THAT. 
     
-    //I tried a bunhc of different ways of fixing it but none of them worked. 
-    //Why can't I just assign a fucking vector
-  
   float xSpeed = 3;
   float ySpeed = 4;
   
@@ -25,18 +22,12 @@ class Ball {
    x = width / 2;
    y = height;
   }
-  
-  /*void setup(){
-    fill(255, 0, 0);
-  }*/
-  
+
   void floatUp(){
     y--;
   }
   
   void display(){
-       
-  
    stroke(10);
    fill(R, G, B);
    ellipse(x, y, ballWidth, ballHeight);

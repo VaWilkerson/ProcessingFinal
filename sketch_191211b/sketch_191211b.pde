@@ -16,7 +16,8 @@ Game has data and functions
     balls when a new one is spawned.
   need to spawn them in opposite direction of the ball. 
   
-  maybe start with just changing the color and direction of the new ball.
+  maybe start with just changing the color and direction of the 
+  new ball.
   
 Take the current color of the ball (blue) and spawn a new ball
   that is the complementary color (orange). 
@@ -33,10 +34,29 @@ Need to change the color mode to HSV so that I'm dealing with a wheel
 
 new ball needs different color. 
   
-  
-  
 Might be easier to have different shape classes and just destroy 
   the original shape when spawning the next two. 
-  Assigning the color would have to reference the color of the previous shape. 
+  Assigning the color would have to reference the color of 
+  the previous shape. 
     Fuck. Nevermind that is not easier.
+    
+Hm. get() seems useful. It can  take a PVector color from an img 
+and I can change the color mode to HSV from RGB. 
+
+I could just make a list/dictionary of colors and assign them manually. 
+It would be a pain in the ass but might be easier for me to do 
+rather than trying to figure out how to split the HSV circle.
+
+So:
+If the Ball color is magenta, clicking the ball will change the color 
+of that ball to red and spawn a blue ball. 
+
+If the Ball color is blue, clicking the ball will change the color
+of that ball to cyan and spawn a magenta ball. 
+
+each click creates an analogous color scheme and 
+removes the centre color. 
+
+
+
 */
