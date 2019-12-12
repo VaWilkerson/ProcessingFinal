@@ -24,7 +24,8 @@ void draw(){
   // then we would need to keep track of those two new balls
   
   b.display();
-  b.move();
+  //b.move();  //kk, now ball is at the bottom
+  
 }
 
 void display(){  //functionality
@@ -45,7 +46,12 @@ void display(){  //functionality
    // if so, make ball be half in size
    // make a new ball that's the same size
    
-   Ball x = new Ball();
+   Ball x = new Ball();{
+    //println = "New ball" //I hate how every time I need to 
+    //do something incredibly simple I have to look it 
+    //up online and it takes me 10 minutes instead of 10 seconds. 
+    println("New Ball");
+   }
     // add x to array;
     
     b.changeSize();

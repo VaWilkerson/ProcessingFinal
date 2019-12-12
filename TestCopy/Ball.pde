@@ -31,7 +31,7 @@ class Ball {
    fill(R, G, B);
    ellipse(x, y, ballWidth, ballHeight);
   }
-  
+   
   void move() {
     if (x > width || x < 0) {
       xSpeed = -xSpeed;
