@@ -57,7 +57,7 @@ of that ball to cyan and spawn a magenta ball.
 each click creates an analogous color scheme and 
 removes the centre color. 
 
-This assumes that there is no "orange" or "green" in the color wheel,
+This assumes that there is no "orange" or "green"  in the color wheel,
 but I may need 
 to include it anyway if I want to do a split complementary 
 which is more interesting theory-wise, but orange and green are useless 
@@ -68,6 +68,6 @@ Hm. triangle that splits each time.
 
 Ok I'm just going to put a ball in the middle and try to get
 another ball to spawn beside it. 
-Baby steps. 
+Baby steps. ..
 
 */
