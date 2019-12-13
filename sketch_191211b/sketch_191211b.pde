@@ -84,6 +84,15 @@ void draw() {
   polygon(0, 0, 82, 3);  // Triangle
   
   
+//  void drawHex(float x, float y, float gs) {
+//  beginShape();
+//  for(int i=0;i<6;i++){
+//    float angle = i * 2 * PI / 6;
+//    vertex(x + gs*cos(angle),y + gs*sin(angle));
+//  }
+//  endShape(CLOSE);
+//}
+  
   translate(width*0.8, height*0.5);
   //rotate(frameCount / -100.0);
   polygon(0, 0, 70, 7);  // Heptagon
