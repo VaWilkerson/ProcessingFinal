@@ -14,7 +14,7 @@ Game has data and functions
   need a duplicate fn to spawn a new ball on mouseclicked. 
   need a color change function to change the color of the 
     balls when a new one is spawned.
-  need to spawn them in opposite direction of the ball. 
+  need to spawn them in opposite direction of the ball. b
   
   maybe start with just changing the color and direction of the 
   new ball.
@@ -71,3 +71,31 @@ another ball to spawn beside it.
 Baby steps. ..
 
 */
+
+void setup() {
+  size(640, 360);
+}
+
+void draw() {
+  background(102);
+  
+  translate(width*0.2, height*0.5);
+  //rotate(frameCount / 200.0);
+  polygon(0, 0, 82, 3);  // Triangle
+  
+  
+  translate(width*0.8, height*0.5);
+  //rotate(frameCount / -100.0);
+  polygon(0, 0, 70, 7);  // Heptagon
+}
+
+void polygon(float x, float y, float radius, int npoints) {
+  float angle = TWO_PI / npoints;
+  beginShape();
+  for (float a = 0; a < TWO_PI; a += angle) {
+    float sx = x + cos(a) * radius;
+    float sy = y + sin(a) * radius;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
+}
