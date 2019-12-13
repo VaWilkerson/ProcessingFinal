@@ -12,15 +12,22 @@ class Ball {
   //PVector BallColor = new PVector (R,G,B); //finally fixed it. I'm dumb
     //TURNED OUT IT DOESNT WORK WHERE I NEED IT TO SO FUCK THAT. 
     
-  float xSpeed = 3;
-  float ySpeed = 4;
+  //int speedX[] = {3, -3, 4, -4};
+  //want the start direction of the balls to be random, 
+  //not just the location. 
+  //int speedY[] = {3, -3, 4, -4};
+  
+  
+  float xSpeed[] = {3, -3, 4, -4};
+  float ySpeed[] = {3, -3, 4, -4};
   
   float ballWidth = 64;
   float ballHeight = 64;
   
   Ball(){
-   x = width / 2;
-   y = random(100);
+   //x = width / 2
+   x = random(640);
+   y = random(360);
   }
 
   void floatUp(){

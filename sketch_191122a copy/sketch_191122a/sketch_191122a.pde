@@ -5,6 +5,7 @@
 float ballColorValue = 0;
 Ball b;
 Ball[] balls;
+int ballCount = 0;
 // an array of balls
 // when you click on a ball, 
 
@@ -13,18 +14,13 @@ void setup(){
   b = new Ball(); 
   //b.mousePressed();  //magenta
   balls = new Ball[5];
-  balls[0] = new Ball();
-  balls[1] = new Ball();
-  balls[2] = new Ball();
-  balls[3] = new Ball();
-  balls[4] = new Ball();
   
 }
 
 void draw(){
   background(200); 
   
-   for (int i = 0; i < balls.length; i = i+1) {
+  for (int i = 0; i < ballCount; i = i+1) {
   balls[i].display();
   balls[i].move();
 }
@@ -48,7 +44,10 @@ void display(){  //functionality
   void mousePressed() {
     // for loop that goes through your array of balls
     
-    
+    if (ballCount < balls.length){
+      balls[ballCount] = new Ball();
+      ballCount++;
+    }
     
     // FOR EACH BALL: 
     // see if mouse is over the ball;
