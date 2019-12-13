@@ -1,6 +1,7 @@
 
 //float ballX;
 //float xSpeed = 4;
+boolean circleOver = false;
 
 float ballColorValue = 0;
 Ball b;
@@ -25,33 +26,37 @@ void draw(){
   balls[i].move();
   //balls[i].changeColor();
 }
-
-  
   // "b" is a Ball named b that's at the top
   // if we have an array of balls, we could use a for loop
   // and tell all of them to display and move
   
+  if (circleOver) {
+    b.R = 255;
+  }
+  
   // if we click on a ball, it could make two new balls, and destroy itself
   // then we would need to keep track of those two new balls
-  
-  //b.display();
-  //b.move();
 }
 
-//void display(){  //functionality
-    //ellipse(50, 50, 64, 64);}
+void display(){  //functionality
+    ellipse(50, 50, 64, 64);}
 
-  //void mouseDragged() {
   void mousePressed() {
     // for loop that goes through your array of balls
-    
     if (ballCount < balls.length){
       balls[ballCount] = new Ball();
       ballCount++;
     }
    
-   
     // FOR EACH BALL: 
+    //for (balls[i]){
+    //  if (mouseX.pos && mouseY.pos = Ball.x && Ball.y){
+        
+    //  }
+    //}
+    
+     
+    
     // see if mouse is over the ball;
     
    //     get mouse position
@@ -66,13 +71,24 @@ void draw(){
     // add x to array;
     
     //b.display();
-    //b.changeSize();
+    b.changeSize();
     //b.changeColor();
     
   //b.R = random(255);
   //b.G = 40;
   //b.B = 240;
   }
+
+boolean overCircle(int x, int y, int diameter) {
+  float disX = x - mouseX;
+  float disY = y - mouseY;
+  if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
  //void mousePressed() {
  // if (value == 0) {
