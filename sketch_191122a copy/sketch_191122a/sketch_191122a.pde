@@ -14,7 +14,7 @@ void setup(){
   b = new Ball(); 
   //b.mousePressed();  //magenta
   balls = new Ball[5];
-  
+  //b.changeColor();
 }
 
 void draw(){
@@ -23,6 +23,7 @@ void draw(){
   for (int i = 0; i < ballCount; i = i+1) {
   balls[i].display();
   balls[i].move();
+  //balls[i].changeColor();
 }
 
   
@@ -37,8 +38,8 @@ void draw(){
   //b.move();
 }
 
-void display(){  //functionality
-    ellipse(50, 50, 64, 64);}
+//void display(){  //functionality
+    //ellipse(50, 50, 64, 64);}
 
   //void mouseDragged() {
   void mousePressed() {
@@ -48,7 +49,8 @@ void display(){  //functionality
       balls[ballCount] = new Ball();
       ballCount++;
     }
-    
+   
+   
     // FOR EACH BALL: 
     // see if mouse is over the ball;
     
@@ -60,14 +62,16 @@ void display(){  //functionality
    // if so, make ball be half in size
    // make a new ball that's the same size
    
-   Ball x = new Ball();
+   //Ball x = new Ball();
     // add x to array;
     
-    b.changeSize();
+    //b.display();
+    //b.changeSize();
+    //b.changeColor();
     
-  b.R = random(255);
-  b.G = 40;
-  b.B = 240;
+  //b.R = random(255);
+  //b.G = 40;
+  //b.B = 240;
   }
 
  //void mousePressed() {

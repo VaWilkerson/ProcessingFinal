@@ -10,9 +10,9 @@ boolean circleOver = false;
 
 void setup() {
   size(640, 360);
-  rectColor = color(0);
+  rectColor = color(random(255), random(255), random(255));
   rectHighlight = color(51);
-  circleColor = color(255);
+  circleColor = color(random(255), random(255), random(255));
   circleHighlight = color(204);
   baseColor = color(102);
   currentColor = baseColor;
@@ -63,7 +63,6 @@ void mousePressed() {
   if (rectOver) {
     currentColor = rectColor;
   }
-  
 }
 
 boolean overRect(int x, int y, int width, int height)  {

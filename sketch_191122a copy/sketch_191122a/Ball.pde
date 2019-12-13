@@ -3,9 +3,9 @@ class Ball {
   float x;
   float y;
   
-  float R = 0;
-  float G = 0;
-  float B = 0;
+  float R = random(255); //OMFG finally. 
+  float G = random(255);
+  float B = random(255);
   
   //PVector Color;
   //PVector color Color = (R, G, B);   //keeps giving me syntax errors. 
@@ -18,8 +18,8 @@ class Ball {
   int speedY[] = {3, -3, 4, -4};
   
   
-  float xSpeed = 3;
-  float ySpeed = 4;
+  float xSpeed = speedX[2];
+  float ySpeed = speedY[3];
   
   float ballWidth = 64;
   float ballHeight = 64;
@@ -28,6 +28,8 @@ class Ball {
    //x = width / 2
    x = random(640);
    y = random(360);
+   
+   //changeColor();
   }
 
   void floatUp(){
@@ -36,7 +38,7 @@ class Ball {
   
   void display(){
    stroke(10);
-   fill(R, G, B);
+   fill (R, G, B);
    ellipse(x, y, ballWidth, ballHeight);
   }
   
@@ -51,18 +53,18 @@ class Ball {
     
     x += xSpeed;
     y += ySpeed;
-     
+    
+    //x += random(xSpeed);
+    //y += random(ySpeed);
      
   }
   
   void changeSize() {
-    ballWidth =ballWidth /2;
+    ballWidth = ballWidth / 2;
     ballHeight = ballHeight / 2;
-    
   }
  
-  void changeColor(){ fill(random(255), random(255), random(255); }
+  void changeColor(){fill(random(R), random(G), random(B)); }
   //these colors are going to be hideous but w/e 
-  
   
 }
