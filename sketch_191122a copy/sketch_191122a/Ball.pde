@@ -20,7 +20,7 @@ class Ball {
   
   Ball(){
    x = width / 2;
-   y = height;
+   y = random(100);
   }
 
   void floatUp(){
